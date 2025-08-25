@@ -53,26 +53,33 @@ struct CarouselView: View {
                 }
             }
             .padding(.horizontal, 16.0)
-            HStack {
-                ForEach(0..<itemsCount, id: \.self) { index in
-                    Button {
-                        withAnimation(.easeIn) {
-                            currentIndex = index
-                        }
-                    } label: {
-                        RoundedRectangle(cornerRadius: 100.0)
-                            .fill(currentIndex == index ? Color.blue : Color.gray)
-                            .frame(width: 16.0, height: 2.0)
-                    }
-                }
-            }
+            pageControler
             .padding(.horizontal, 16.0)
         }
+        .frame(height: cardHeight + 24.0)
         .onAppear {
             startTimer()
         }
         .onDisappear {
             stopTimer()
+        }
+    }
+}
+
+extension CarouselView {
+    var pageControler: some View {
+        HStack {
+            ForEach(0..<itemsCount, id: \.self) { index in
+                Button {
+                    withAnimation(.easeIn) {
+                        currentIndex = index
+                    }
+                } label: {
+                    RoundedRectangle(cornerRadius: 100.0)
+                        .fill(currentIndex == index ? Color.blue : Color.gray)
+                        .frame(width: 16.0, height: 2.0)
+                }
+            }
         }
     }
 }
