@@ -28,7 +28,7 @@ struct CarouselView: View {
                     ZStack {
                         ForEach(0..<itemsCount, id: \.self) { index in
                             RoundedRectangle(cornerRadius: 15.0)
-                                .fill(Color.blue)
+                                .fill(currentIndex == index ? Color.blue : Color.gray)
                                 .frame(width: self.cardWidth, height: self.cardHeight)
                                 .offset(x: CGFloat(index - currentIndex) * (geometry.size.width * 0.6) + leftDisplacement + dragOffset)
                                 .id(index)
