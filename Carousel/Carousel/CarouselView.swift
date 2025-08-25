@@ -44,9 +44,9 @@ struct CarouselView: View {
                                 userScrolled()
                                 let threadshold = geometry.size.width * 0.3
                                 if value.translation.width > threadshold {
-                                    currentIndex += 1
+                                    currentIndex = max(currentIndex - 1, .zero)
                                 } else if value.translation.width < -threadshold {
-                                    currentIndex = min(currentIndex + 1, itemsCount)
+                                    currentIndex = min(currentIndex + 1, itemsCount - 1)
                                 }
                             }
                     )
