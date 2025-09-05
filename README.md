@@ -6,7 +6,7 @@ _key notes:_
 ☑️ DragGesture
 ☑️ autoScroll
 ![CarouselView](assets/one.png)
-## CarouselScrolView<h2>
+## CarouselScrollView<h2>
 _key notes:_
 ☑️ ScrollView
 ![CarouselView](assets/two.png)
