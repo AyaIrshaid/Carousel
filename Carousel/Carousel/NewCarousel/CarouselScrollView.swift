@@ -1,5 +1,5 @@
 //
-//  CarouselScrolView.swift
+//  CarouselScrollView.swift
 //  Carousel
 //
 //  Created by Aya Irshaid on 04/09/2025.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CarouselScrolView: View {
+struct CarouselScrollView: View {
     let items = Array(0..<10)
     let cardWidth: CGFloat = 200
     let cardSpacing: CGFloat = 20
@@ -50,5 +50,5 @@ struct CardView: View {
 }
 
 #Preview {
-    CarouselScrolView()
+    CarouselScrollView()
 }
